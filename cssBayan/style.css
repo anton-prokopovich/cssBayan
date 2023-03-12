@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    min-width: 3.2rem;
+    min-width: 31rem;
     padding: 0 0.5rem;
 }
 
@@ -70,6 +70,10 @@ label:after {
     height: 280px;
 }
 
+.meme-section {
+    cursor: pointer;
+}
+
 label:hover {
     cursor: pointer;
 }
@@ -81,19 +85,19 @@ label:hover:after {
     transition: 1s;
 }
 
-.meme-card input:checked~.meme {
-    display: flex;
-    height: auto;
-    justify-content: center;
-    transition: all 1s ease-out;  
-    animation: bright 2s 1;
-}
-
 label:hover~.meme {
     display: flex;
     height: 100%;
     justify-content: center;
     transition: all 1s ease-out;
+    animation: bright 2s 1;
+}
+
+.meme-card input:checked~.meme {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    transition: all 1s ease-out;  
     animation: bright 2s 1;
 }
 
@@ -103,5 +107,29 @@ label:hover~.meme {
     }
     100% {
         opacity: 100%;
+    }
+}
+
+@media (min-width: 810px) {
+    .wrapper {
+        width: 80rem;
+        padding: 0 10rem;
+    }
+
+    .header__title {
+        font-size: 2.8rem;
+    }
+
+    .meme-card label {
+        font-size: 2.8rem;
+        font-weight: 400;
+        padding: 1rem 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .wrapper {
+        width: 120rem;
+        padding: 0 10rem;
     }
 }
